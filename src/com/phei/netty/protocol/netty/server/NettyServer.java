@@ -52,7 +52,8 @@ public class NettyServer {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         ServerBootstrap b = new ServerBootstrap();
-        b.group(bossGroup, workerGroup).channel(NioServerSocketChannel.class)
+        b.group(bossGroup, workerGroup)
+                .channel(NioServerSocketChannel.class)
                 .option(ChannelOption.SO_BACKLOG, 100)
                 .handler(new LoggingHandler(LogLevel.INFO))
                 .childHandler(new ChannelInitializer<SocketChannel>() {
@@ -60,7 +61,8 @@ public class NettyServer {
                     public void initChannel(SocketChannel ch)
                             throws IOException {
                         ch.pipeline().addLast(
-                                new NettyMessageDecoder(1024 * 1024, 4, 4));
+                                new NettyMessageDecoder(1024 * 1024,
+                                        4, 4));
                         ch.pipeline().addLast(new NettyMessageEncoder());
                         ch.pipeline().addLast("readTimeoutHandler",
                                 new ReadTimeoutHandler(50));

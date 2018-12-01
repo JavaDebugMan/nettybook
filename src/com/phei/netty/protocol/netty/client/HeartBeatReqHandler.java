@@ -1,12 +1,12 @@
 /*
  * Copyright 2013-2018 Lilinfeng.
- *  
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *  
+ *
  *      http://www.apache.org/licenses/LICENSE-2.0
- *  
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -52,9 +52,8 @@ public class HeartBeatReqHandler extends ChannelHandlerAdapter {
         } else if (message.getHeader() != null
                 && message.getHeader().getType() == MessageType.HEARTBEAT_RESP
                 .value()) {
-            LOG.info("Client receive server heart beat message : ---> "
-                            + message);
-            System.out.println("Client receive server heart beat message : ---> "
+
+            System.out.println("客户端接收到服务端的响应心跳消息:Client receive server heart beat message : ---> "
                     + message);
         } else
             ctx.fireChannelRead(msg);
@@ -70,9 +69,8 @@ public class HeartBeatReqHandler extends ChannelHandlerAdapter {
         @Override
         public void run() {
             NettyMessage heatBeat = buildHeatBeat();
-            LOG.info("Client send heart beat messsage to server : ---> "
-                            + heatBeat);
-            System.out.println("Client send heart beat messsage to server : ---> "
+
+            System.out.println("客户端发送到服务端心跳消息:Client send heart beat messsage to server : ---> "
                     + heatBeat);
             ctx.writeAndFlush(heatBeat);
         }

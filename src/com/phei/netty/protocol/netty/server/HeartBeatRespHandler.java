@@ -42,14 +42,12 @@ public class HeartBeatRespHandler extends ChannelHandlerAdapter {
         if (message.getHeader() != null
                 && message.getHeader().getType() == MessageType.HEARTBEAT_REQ
                 .value()) {
-            LOG.info("Receive client heart beat message : ---> "
-                    + message);
-            System.out.println("Receive client heart beat message : ---> "
+
+            System.out.println("服务端接收到客户端的心跳消息:Receive client heart beat message : ---> "
                     + message);
             NettyMessage heartBeat = buildHeatBeat();
-            LOG.info("Send heart beat response message to client : ---> "
-                    + heartBeat);
-            System.out.println("Send heart beat response message to client : ---> "
+
+            System.out.println("服务端相应给客户端的心跳消息:Send heart beat response message to client : ---> "
                     + heartBeat);
             ctx.writeAndFlush(heartBeat);
         } else

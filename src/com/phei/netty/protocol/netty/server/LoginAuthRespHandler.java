@@ -78,9 +78,7 @@ public class LoginAuthRespHandler extends ChannelHandlerAdapter {
 		if (isOK)
 		    nodeCheck.put(nodeIndex, true);
 	    }
-	    LOG.info("The login response is : " + loginResp
-		    + " body [" + loginResp.getBody() + "]");
-		System.out.println("The login response is : " + loginResp
+		System.out.println("服务端响应给客户端的LoginResponse:The login response is : " + loginResp
 				+ " body [" + loginResp.getBody() + "]");
 	    ctx.writeAndFlush(loginResp);
 	} else {
