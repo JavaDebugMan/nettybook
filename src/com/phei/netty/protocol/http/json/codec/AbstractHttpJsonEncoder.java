@@ -12,7 +12,8 @@ import java.nio.charset.Charset;
 /**
  * @author pengzhe
  * @date 2018/4/28 23:03
- * @description 封装Json的序列化方法
+ * @description 请求消息编码基类
+ * 封装Json的序列化方法
  */
 
 public abstract class AbstractHttpJsonEncoder<T> extends MessageToMessageEncoder<T> {

@@ -14,7 +14,13 @@ import java.nio.charset.Charset;
  */
 
 public abstract class AbstractHttpJsonDecoder<T> extends MessageToMessageDecoder<T> {
+    /**
+     * 需要解码的对象类型信息
+     */
     private Class<?> clazz;
+    /**
+     * 是否打印HTTP消息体码流的码流开关,默认关闭
+     */
     private boolean isPrint;
     private final static Charset UTF_8 = Charset.forName("UTF-8");
 

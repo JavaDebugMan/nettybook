@@ -43,6 +43,9 @@ public class HttpJsonRequestDecoder extends AbstractHttpJsonDecoder<FullHttpRequ
      */
     @Override
     protected void decode(ChannelHandlerContext ctx, FullHttpRequest msg, List<Object> out) throws Exception {
+        /**
+         * 首先对HTTP请求消息本身的解码结果进行判断,如果已经解码失败,在对消息体进行二次解码已经没有意义
+         */
         if (!msg.getDecoderResult().isSuccess()) {
             sendError(ctx, HttpResponseStatus.BAD_REQUEST);
             return;
@@ -53,6 +56,7 @@ public class HttpJsonRequestDecoder extends AbstractHttpJsonDecoder<FullHttpRequ
 
 
     /**
+     * 如果HTTP消息本身解码失败,则构造处理结果异常的HTTP应答消息返回给客户端
      * 测试的话，直接封装，实战中需要更健壮的处理
      */
     private static void sendError(ChannelHandlerContext ctx,
