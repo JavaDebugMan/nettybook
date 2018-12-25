@@ -10,7 +10,7 @@ import java.nio.charset.Charset;
 /**
  * @author pengzhe
  * @date 2018/4/28 23:15
- * @description
+ * @description 封装Json的反序列化方法
  */
 
 public abstract class AbstractHttpJsonDecoder<T> extends MessageToMessageDecoder<T> {

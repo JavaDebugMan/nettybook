@@ -17,7 +17,7 @@ import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 /**
  * @author pengzhe
  * @date 2018/4/28 23:19
- * @description
+ * @description 请求消息解码器, 供HTTP服务端发送请求消息自动解码使用
  */
 
 public class HttpJsonRequestDecoder extends AbstractHttpJsonDecoder<FullHttpRequest> {

@@ -7,7 +7,7 @@ import com.phei.netty.protocol.http.json.pojo.OrderFactory;
 /**
  * @author pengzhe
  * @date 2018/4/28 23:12
- * @description
+ * @description Json序列化框架, 实现POJO-JSON的相互转换
  */
 
 public class GsonUtils {
@@ -26,7 +26,7 @@ public class GsonUtils {
         Order order = OrderFactory.create(100L);
         String json = GsonUtils.toJson(order);
         System.out.println(json);
-        Order order1 = (Order)GsonUtils.toObject(json, Order.class);
+        Order order1 = (Order) GsonUtils.toObject(json, Order.class);
         System.out.println(order1);
     }
 }

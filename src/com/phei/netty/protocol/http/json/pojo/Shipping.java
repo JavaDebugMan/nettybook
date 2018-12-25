@@ -6,5 +6,14 @@ package com.phei.netty.protocol.http.json.pojo;
  * methods is required in this case.
  */
 public enum Shipping {
-    STANDARD_MAIL, PRIORITY_MAIL, INTERNATIONAL_MAIL, DOMESTIC_EXPRESS, INTERNATIONAL_EXPRESS
+    //普通邮递
+    STANDARD_MAIL,
+    //宅急送
+    PRIORITY_MAIL,
+    //国际邮递
+    INTERNATIONAL_MAIL,
+    //国内快递
+    DOMESTIC_EXPRESS,
+    //国际快递
+    INTERNATIONAL_EXPRESS
 }

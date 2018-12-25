@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author pengzhe
  * @date 2018-12-25 21:42
- * @description
+ * @description 响应消息解码器, 供HTTP客户端对应答消息进行自动解码使用
  */
 
 public class HttpJsonResponseDecoder extends AbstractHttpJsonDecoder<FullHttpResponse> {

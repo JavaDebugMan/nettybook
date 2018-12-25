@@ -12,7 +12,7 @@ import static io.netty.handler.codec.http.HttpHeaders.setContentLength;
 /**
  * @author pengzhe
  * @date 2018-12-25 21:39
- * @description
+ * @description 请求消息编码器, 供HTTP客户端发送请求时, 消息自动编码使用
  */
 
 public class HttpJsonRequestEncoder extends AbstractHttpJsonEncoder<HttpJsonRequest> {

@@ -15,7 +15,7 @@ import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 /**
  * @author pengzhe
  * @date 2018-12-25 21:34
- * @description
+ * @description 响应消息编码器, 供HTTP服务端发送响应消息自动编码使用
  */
 
 public class HttpJsonResponseEncoder extends AbstractHttpJsonEncoder<HttpJsonResponse> {
