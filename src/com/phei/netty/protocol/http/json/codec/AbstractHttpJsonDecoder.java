@@ -18,10 +18,6 @@ public abstract class AbstractHttpJsonDecoder<T> extends MessageToMessageDecoder
     private boolean isPrint;
     private final static Charset UTF_8 = Charset.forName("UTF-8");
 
-    protected AbstractHttpJsonDecoder(Class<?> clazz) {
-        this(clazz, false);
-    }
-
     protected AbstractHttpJsonDecoder(Class<?> clazz, boolean isPrint) {
         this.clazz = clazz;
         this.isPrint = isPrint;
