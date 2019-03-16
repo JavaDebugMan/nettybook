@@ -29,6 +29,7 @@ import java.util.Set;
  * @author Administrator
  * @version 1.0
  * @date 2014年2月16日
+ * Reactor线程
  */
 public class MultiplexerTimeServer implements Runnable {
 
